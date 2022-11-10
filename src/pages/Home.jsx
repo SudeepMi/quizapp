@@ -1,20 +1,16 @@
 import React from 'react'
+import LeaderBoard from '../components/LeaderBoard'
+import Questions from '../components/Questions'
+import UserProfile from '../components/UserProfile'
 import './home.css'
 
 function Home() {
   return (
-    <>
-    <div className='question'>
-      <h2>Which data structure uses FIFO techniques?</h2>
-      <div className='option_area'>
-        <p>A. Stack</p>
-        <p>B. Queue</p>
-        <p>C. Circular Queue</p>
-        <p>D. Linked List</p>
-
-      </div>
+    <div className="home_wrapper">
+     <UserProfile/>
+     <Questions />
+     <LeaderBoard />
     </div>
-    </>
   )
 }
 
