@@ -36,6 +36,12 @@ body {
         border: none;
         border: 1px solid #fff;
         border-radius: 5px;
+        cursor: pointer;
+        transition: .4s;
+        &:hover {
+          color: #fff8;
+          border: 1px solid #fff8;
+        }
       }
     }
     .siginin__container {

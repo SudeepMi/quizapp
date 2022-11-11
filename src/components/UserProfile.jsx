@@ -13,7 +13,6 @@ function UserProfile() {
             <p><i className="ri-questionnaire-line"></i> Attemted: 20</p>
             <p><i className="ri-questionnaire-line"></i> Correct: 20</p>
             <p><i className="ri-questionnaire-line"></i> Rank: 20</p>
-
         </div>
         </div>
     </div>

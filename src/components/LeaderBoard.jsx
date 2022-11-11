@@ -2,7 +2,11 @@ import React from 'react'
 
 function LeaderBoard() {
   return (
-    <div className='leaderboards'>LeaderBoard</div>
+    <div className='leaderboards'>
+      <div className="profile__box">
+        
+      </div>
+    </div>
   )
 }
 
