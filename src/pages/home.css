@@ -1,0 +1,27 @@
+.home_wrapper {
+  width: 90%;
+  margin: 0.5em auto;
+  @media screen and (min-width: 50em) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .user_profile {
+    border: 1px solid rgb(1, 1, 1);
+    grid-area: profile;
+    display: none;
+    .profile_box {
+      padding: 1.5em;
+    }
+  }
+  .questions {
+    margin: 1em 0;
+    grid-area: question;
+    grid-column:1/3;
+  }
+
+  .leaderboards {
+    grid-area: leaderboard;
+  }
+
+
+}
