@@ -10,9 +10,9 @@ function UserProfile() {
             <h3>Team A</h3>
         </div>
         <div className='user_stat'>
-            <p><i class="ri-questionnaire-line"></i> Attemted: 20</p>
-            <p><i class="ri-questionnaire-line"></i> Correct: 20</p>
-            <p><i class="ri-questionnaire-line"></i> Rank: 20</p>
+            <p><i className="ri-questionnaire-line"></i> Attemted: 20</p>
+            <p><i className="ri-questionnaire-line"></i> Correct: 20</p>
+            <p><i className="ri-questionnaire-line"></i> Rank: 20</p>
 
         </div>
         </div>
