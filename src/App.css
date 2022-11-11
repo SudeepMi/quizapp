@@ -38,6 +38,7 @@ body {
         border-radius: 5px;
         cursor: pointer;
         transition: .4s;
+        color: #fff;
         &:hover {
           color: #fff8;
           border: 1px solid #fff8;
