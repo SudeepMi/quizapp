@@ -44,5 +44,63 @@ body {
         }
       }
     }
+    .siginin__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      .signin {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.729);
+        padding: 3em 2em;
+        border-radius: 5px;
+        background-color: #161b22;
+
+        .welcome {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+          padding: 0 5em;
+
+          i {
+            font-size: 1.3em;
+          }
+        }
+        .inputs {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          width: 100%;
+          
+          input {
+            padding: 0.8em 0.5em;
+
+          &:focus {
+            outline: none;
+          }
+          }
+        }
+
+        button {
+          cursor: pointer;
+          padding: 0.5em;
+          width: 100%;
+          background-color: #0d1117;
+          color: #fff;
+          border: none;
+          font-size: 1.2em;
+          margin-top: .5em;
+          transition: .8s;
+          border-radius: 5px;
+          &:hover {
+            background-color: #38393bc4;
+          }
+        }
+      }
+    }
   }
 }
