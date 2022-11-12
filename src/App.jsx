@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Public from "./pages/Public";
 import PrivateRoute from "./utils/PrivateRoute";
 import Signin from "./components/Signin";
-import PublicRoute from "./utils/PublicRoute";
+// import PublicRoute from "./utils/PublicRoute";
 
 function App() {
   const [islogged, setislogged] = React.useState(true);
