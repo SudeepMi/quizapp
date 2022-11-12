@@ -22,7 +22,7 @@ function Home() {
   return (
     <div className="home_wrapper">
      <UserProfile/>
-     <Questions />
+     <Questions next={next} />
      <LeaderBoard />
     </div>
   )

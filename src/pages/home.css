@@ -17,21 +17,55 @@
   .questions {
     margin: 1em 0;
     grid-area: question;
+
+    .option_area {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 15px;
+      margin-right: 150px;
+
+      p{
+        cursor: pointer;
+        padding: .5em;
+/* 
+        &.correct {
+          background-color: rgba(0, 255, 0, 0.527);
+          border-radius: 5px;
+        } */
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 2em;
+      button {
+        padding: .5em;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        font-size: 1.1em;
+      }
+    }
   }
 
   .leaderboards {
     grid-area: leaderboard;
+    margin-top: 1em;
     .profile__box {
       display: flex;
       border: 1px solid #ffffff;
       padding: 0.5em;
       position: relative;
+      gap: 10px;
 
       .position {
         position: absolute;
-        right: 0;
-        top: -12px;
-        padding: .5em .3em;
+        right: 10px;
+        top: -18px;
+        padding: 0.5em 0.3em;
         border: 1px solid #fff;
         background-color: #fff;
         color: #000;
@@ -41,12 +75,14 @@
       img {
         height: 150px;
         border-radius: 50%;
+        background-color: rgb(1, 1, 1);
       }
       .team {
         display: flex;
         flex-direction: column;
         flex: 1;
-        margin-top: 1.5em;
+        margin-top: 2em;
+        gap: 10px;
         h3 {
           border: 1px solid #fff;
           text-align: center;
