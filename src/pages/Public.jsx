@@ -1,6 +1,7 @@
 import React from 'react'
 import Questions from '../components/Questions'
 import Pusher from "pusher-js"
+import LeaderBoard from '../components/LeaderBoard'
 const Public = () => {
 
   React.useEffect(()=>{
@@ -20,8 +21,9 @@ const Public = () => {
       }
   },[])
   return (
-    <div>
+    <div className='home_wrapper'>
       <Questions />
+      <LeaderBoard />
     </div>
   )
 }
