@@ -6,7 +6,8 @@
     gap: 150px 50px;
     grid-template-areas:
       "question question leaderboard"
-      "progressbar progressbar progressbar";
+      "progressbar progressbar progressbar"
+      "answer answer .";
   }
   .user_profile {
     border: 1px solid rgb(1, 1, 1);
@@ -135,5 +136,28 @@
 
   .code_competition {
     right: -5px;
+  }
+}
+
+.answerby__component {
+  border: 1px dotted;
+  grid-area: answer;
+  padding: 1em;
+  margin-top: 3em;
+  .answer {
+    border: 2px solid;
+    padding: 1em;
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    gap: 20px;
+
+
+    p {
+      border: 1px solid;
+      text-align: center;
+      padding: .5em;
+      font-size: 1.2em;
+    }
   }
 }

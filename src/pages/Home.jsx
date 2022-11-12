@@ -5,6 +5,7 @@ import UserProfile from '../components/UserProfile'
 import './home.css'
 import Pusher from "pusher-js"
 import Progressbar from '../components/Progressbar'
+import Answer from '../components/Answer'
 
 function Home() {
   const next = () =>{
@@ -26,6 +27,7 @@ function Home() {
      <Questions next={next} />
      <LeaderBoard />
      <Progressbar />
+     <Answer />
     </div>
   )
 }
