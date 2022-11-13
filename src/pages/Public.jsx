@@ -4,16 +4,16 @@ import Pusher from "pusher-js"
 import LeaderBoard from '../components/LeaderBoard'
 const Public = () => {
 
+  const [questionid, setquestionid] = React.useState(0)
   React.useEffect(()=>{
       // Enable pusher logging - don't include this in production
       // Pusher.logToConsole = true;
       const pusher = new Pusher('2142cda6d39765cba2a9', {
           cluster: 'ap2'
       });
-
       const channel = pusher.subscribe('main');
       channel.bind('current', function (data) {
-          alert(JSON.stringify(data));
+          setquestionid(data.questionId);
       });
       return () => {
           channel.unbind_all()
@@ -22,7 +22,8 @@ const Public = () => {
   },[])
   return (
     <div className='home_wrapper'>
-      <Questions />
+     
+      <Questions mode={"optionBased"} questionid={questionid} />
       <LeaderBoard />
     </div>
   )
