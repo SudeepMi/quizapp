@@ -10,6 +10,8 @@ function Questions({ mode, questionid, _revealed, _public }) {
   const [current, setcurrent] = React.useState(
     localStorage.getItem("current") || 0
   );
+  const [animation,setAnimation] = React.useState(false)
+  console.log(animation)
   const isLoggedIn = localStorage.getItem("token") ? true : false;
   const getQuestion = async () => {
     const _questions = await import(`./../questions/${mode}.json`).then(
@@ -50,7 +52,7 @@ function Questions({ mode, questionid, _revealed, _public }) {
 
   return (
     question && (
-      <div className="questions">
+      <div className={`questions ${animation && "animation"}`}>
         <h2>{question.question}</h2>
         <div className="option_area">
           {question.option &&
@@ -75,7 +77,7 @@ function Questions({ mode, questionid, _revealed, _public }) {
         {isLoggedIn && !_public && (
           <div className="buttons">
             <button onClick={() => handleReveal(current)}>Reveal Answer</button>
-            <button onClick={() => next()}>Next</button>
+            <button onClick={() => {next(),setAnimation(true)}} >Next</button>
             <button>Pause Timer</button>
           </div>
         )}
