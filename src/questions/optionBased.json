@@ -1,0 +1,26 @@
+[
+    {
+        "question":"Which data structure uses FIFO techniques?",
+        "option":[
+            "queue",
+            "stack",
+            "array",
+            "linked list"
+        ],
+        "answer":1,
+        "desc":"FIFO stands for First in First Out",
+        "type":"option-based"
+    },
+    {
+        "question":"Which data structure uses LIFO techniques?",
+        "option":[
+            "queue",
+            "circular queue",
+            "array",
+            "linked list"
+        ],
+        "answer":3,
+        "desc":"FIFO stands for First in First Out",
+        "type":"option-based"
+    }
+]
