@@ -6,16 +6,15 @@ import './home.css'
 import Progressbar from '../components/Progressbar'
 import Answer from '../components/Answer'
 
-function Home() {
+function Home({leaders}) {
 
   return (
     <div className="home_wrapper">
      <UserProfile/>
      <Questions mode={"optionBased"}/>
-     <LeaderBoard/>
-     {/* <LeaderBoard team = "Team B" /> */}
+     <LeaderBoard leaders = {leaders}/>
      <Progressbar />
-     <Answer />
+     <Answer leaders = {leaders}/>
     </div>
   )
 }

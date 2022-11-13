@@ -1,0 +1,121 @@
+.public__wrapper {
+  width: 90%;
+  margin: 1em auto;
+
+  .questions {
+    margin: 1em 0;
+    grid-area: question;
+    animation-name: fade;
+    animation-duration: 1s;
+
+    .option_area {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 15px;
+      margin-right: 150px;
+
+      p {
+        cursor: pointer;
+        padding: 0.5em;
+        display: flex;
+        gap: 10px;
+        i {
+          color: rgb(42, 224, 39);
+        }
+
+        &.correct {
+          font-size: 18px;
+          color: rgb(42, 224, 39);
+          border-bottom: 0.5px solid rgb(42, 224, 39);
+        }
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 2em;
+
+      button {
+        cursor: pointer;
+        padding: 0.5em;
+        background-color: #0d1117;
+        color: #fff;
+        border: none;
+        font-size: 1.2em;
+        margin-top: 0.5em;
+        transition: 0.8s;
+        border-radius: 5px;
+        border: 1px solid;
+        &:hover {
+          background-color: #38393bc4;
+        }
+      }
+    }
+  }
+
+  .leaderboards {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+
+    h3 {
+      margin: 1em 0;
+    }
+
+    .profile__box {
+      display: flex;
+      align-items: center;
+      background-color: #38393bc4;
+      margin-top: 1em;
+      padding: 1.1em 1.5em;
+      gap: 20px;
+      border-radius: 3px;
+
+      .imagediv {
+        position: relative;
+
+        .medal {
+          position: absolute;
+          display: flex;
+          top: -10px;
+          left: -20px;
+          align-items: center;
+          gap: 5px;
+          font-size: 1.1em;  
+
+        }
+      }
+
+      &:nth-of-type(1) {
+        background-color: rgba(42, 224, 39, 0.725);
+      }
+      &:nth-of-type(2) {
+        background-color: rgba(255, 255, 0, 0.746);
+        color: #000;
+      }
+
+      &:nth-of-type(3) {
+        background-color: rgba(255, 105, 180, 0.733);
+      }
+
+      img {
+        height: 100px;
+        /* width: 100px; */
+      }
+
+      .team {
+        h3 {
+          font-size: 1.8em;
+          margin: 0.2em 0;
+        }
+
+        .rank {
+          p {
+            font-size: 1.3em;
+          }
+        }
+      }
+    }
+  }
+}

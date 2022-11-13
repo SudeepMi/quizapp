@@ -1,9 +1,10 @@
 import React from "react";
 import Questions from "../components/Questions";
 import Pusher from "pusher-js";
-import LeaderBoard from "../components/LeaderBoard";
+import PublicLeaderBoard from "./PublicLeaderBoard";
+import "./public.css"
 
-const Public = () => {
+const Public = ({ leaders }) => {
   const [questionid, setquestionid] = React.useState(0);
   const [revealed, setreavealed] = React.useState(false);
 
@@ -27,14 +28,14 @@ const Public = () => {
     };
   }, []);
   return (
-    <div className="home_wrapper">
+    <div className="public__wrapper">
       <Questions
         mode={"optionBased"}
         questionid={questionid}
         _public={true}
         _revealed={revealed}
       />
-      <LeaderBoard />
+      <PublicLeaderBoard leaders={leaders} />
     </div>
   );
 };
