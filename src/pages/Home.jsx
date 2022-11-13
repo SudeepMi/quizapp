@@ -12,7 +12,8 @@ function Home() {
     <div className="home_wrapper">
      <UserProfile/>
      <Questions mode={"optionBased"}/>
-     <LeaderBoard />
+     <LeaderBoard/>
+     {/* <LeaderBoard team = "Team B" /> */}
      <Progressbar />
      <Answer />
     </div>

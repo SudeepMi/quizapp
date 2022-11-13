@@ -6,7 +6,7 @@
     gap: 150px 50px;
     grid-template-rows: auto auto;
     grid-template-areas:
-      "progressbar progressbar progressbar"
+      ". progressbar progressbar"
       "question question leaderboard"
       "answer answer .";
   }
@@ -90,11 +90,13 @@
         position: absolute;
         right: 10px;
         top: -18px;
-        padding: 0.5em 0.3em;
+        padding: 0.5em 0.5em;
         border: 1px solid #fff;
         background-color: #fff;
         color: #000;
         border-radius: 5px;
+        line-height: .8;
+        
       }
 
       img {
@@ -128,6 +130,11 @@
   position: relative;
   margin-top: 6em;
 
+  &.animation {
+    animation-name: changeColor;
+    animation-duration: 5s;
+  }
+
   .rapidfire,
   .optionbased,
   .questionare,
@@ -138,20 +145,29 @@
     background-color: #fff;
     position: absolute;
     top: -50px;
+    cursor: pointer;
 
     p {
       position: absolute;
       top: 110px;
       left: 15px;
+      color: #fff;
     }
   }
 
   .rapidfire {
     left: -5px;
+
   }
 
   .optionbased {
     left: 30%;
+
+    &.animation {
+      .progressbar {
+        color: #000;
+      }
+    }
   }
 
   .questionare {
@@ -202,5 +218,27 @@
 
   to {
     margin-left: 0%;
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    color: #fff;
+  }
+
+  30% {
+    color: #000;
+  }
+
+  50% {
+    color: #0d1117; 
+  }
+
+  75% {
+    color: #38393bc4;
+  }
+
+  100% {
+    color: #fff;
   }
 }
