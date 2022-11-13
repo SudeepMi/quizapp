@@ -7,7 +7,7 @@
             "array",
             "linked list"
         ],
-        "answer":2,
+        "answer":1,
         "desc":"FIFO stands for First in First Out",
         "type":"option-based"
     },
@@ -15,7 +15,7 @@
         "question":"Which data structure uses LIFO techniques?",
         "option":[
             "queue",
-            "stack",
+            "circular queue",
             "array",
             "linked list"
         ],
