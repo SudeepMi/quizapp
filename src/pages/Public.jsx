@@ -21,7 +21,7 @@ const Public = () => {
       }
   },[])
   return (
-    <div className='home_wrapper'>
+    <div className='public__wrapper'>
       <Questions />
       <LeaderBoard />
     </div>

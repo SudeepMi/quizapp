@@ -4,9 +4,10 @@
   @media screen and (min-width: 50em) {
     display: grid;
     gap: 150px 50px;
+    grid-template-rows: auto auto;
     grid-template-areas:
+    "progressbar progressbar progressbar"
       "question question leaderboard"
-      "progressbar progressbar progressbar"
       "answer answer .";
   }
   .user_profile {
@@ -42,16 +43,38 @@
       display: flex;
       gap: 15px;
       margin-top: 2em;
+
       button {
-        padding: 0.5em;
         cursor: pointer;
-        background-color: transparent;
+        padding: 0.5em;
+        background-color: #0d1117;
+        color: #fff;
         border: none;
-        border: 1px solid #fff;
+        font-size: 1.2em;
+        margin-top: .5em;
+        transition: .8s;
         border-radius: 5px;
-        font-size: 1.1em;
+        border: 1px solid ;
+        &:hover {
+          background-color: #38393bc4;
+        }
       }
     }
+
+    /* button {
+      cursor: pointer;
+      padding: 0.5em;
+      background-color: #0d1117;
+      color: #fff;
+      border: none;
+      font-size: 1.2em;
+      margin-top: .5em;
+      transition: .8s;
+      border-radius: 5px;
+      &:hover {
+        background-color: #38393bc4;
+      }
+    } */
   }
 
   .leaderboards {
@@ -89,6 +112,7 @@
         h3 {
           border: 1px solid #fff;
           text-align: center;
+          padding: .2em;
         }
         .rank {
           display: flex;
@@ -103,6 +127,7 @@
   grid-area: progressbar;
   border: 1px solid;
   position: relative;
+  margin-top: 6em;
 
   .rapidfire,
   .optionbased,
@@ -143,13 +168,13 @@
   border: 1px dotted;
   grid-area: answer;
   padding: 1em;
-  margin-top: 3em;
   .answer {
     border: 2px solid;
     padding: 1em;
     margin-top: 1em;
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-auto-rows: min-content;
     gap: 20px;
 
 
@@ -161,3 +186,4 @@
     }
   }
 }
+
