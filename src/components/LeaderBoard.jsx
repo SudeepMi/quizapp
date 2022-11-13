@@ -1,17 +1,14 @@
 import React from "react";
 
-function LeaderBoard() {
-  const leaders = [
-    { team: "Team A", attemted: "20", points: 10 },
-    { team: "Team B", attemted: "10", points: 10 },
-  ];
+function LeaderBoard({ leaders }) {
+  const rank = { 1: "1st", 2: "2nd", 3: "3rd" };
 
   return (
     <div className="leaderboards">
       {leaders.map((leader, i) => {
         return (
-          <div className="profile__box">
-            <img src={`https://robohash.org/1`} />
+          <div className="profile__box" key={i}>
+            <img src={`https://robohash.org/${i}`} />
             <div className="team">
               <h3>{leader.team}</h3>
               <div className="rank">
@@ -19,7 +16,9 @@ function LeaderBoard() {
                 <p>points: {leader.points} </p>
               </div>
             </div>
-            <p className="position">1st</p>
+            <p className={`position color-${leader.rank}`}>
+              {rank[leader.rank]}
+            </p>
           </div>
         );
       })}
