@@ -36,11 +36,11 @@
         i{
           color: rgb(42, 224, 39);
         }
-        /* 
+        
         &.correct {
-          background-color: rgba(0, 255, 0, 0.527);
-          border-radius: 5px;
-        } */
+          color: rgb(42, 224, 39);
+          border-bottom: .5px solid rgb(42, 224, 39);
+        }
       }
     }
     .buttons {
