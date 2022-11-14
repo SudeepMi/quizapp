@@ -33,7 +33,6 @@ const Loading = () => {
           </g>
         </g>
       </svg>
-      ;
     </div>
   );
 };
