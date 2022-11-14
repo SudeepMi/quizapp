@@ -5,25 +5,23 @@ import Home from "./pages/Home";
 import Public from "./pages/Public";
 import PrivateRoute from "./utils/PrivateRoute";
 import Signin from "./components/Signin";
+import axios from "axios";
 // import PublicRoute from "./utils/PublicRoute";
 
 function App() {
   const [islogged, setislogged] = React.useState(true);
-
-  const leaders = [
-    { team: "Team A", attemted: "20", points: 10, rank: 1 },
-    { team: "Team B", attemted: "10", points: 10, rank: 2 },
-    { team: "Team C", attemted: "10", points: 10, rank: 3 },
-    { team: "Team C", attemted: "10", points: 10, rank: 4 },
-
-  ];
+  const [leaders,setLeaders] = React.useState([]);
+  // const leaders = [];
+  React.useEffect(()=>{
+    axios.get("https://quizapp-server-production.up.railway.app/getTeam").then(res=>setLeaders(res.data))
+  },[])
 
   return (
     <div className="main">
       {islogged && <Navbar />}
       <Routes>
         <Route exact element={<PrivateRoute />}>
-          <Route path="/home" element={<Home leaders = {leaders}/>} />
+          <Route path="/home" element={<Home leaders = {leaders} setLeaders={setLeaders} />} />
         </Route>
         <Route path="/" element={<Public leaders = {leaders}/>} />
         <Route path="/signin" element={<Signin />} />

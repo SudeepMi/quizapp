@@ -7,6 +7,7 @@ import "./public.css"
 const Public = ({ leaders }) => {
   const [questionid, setquestionid] = React.useState(0);
   const [revealed, setreavealed] = React.useState(false);
+  const [_leaders,_setLeaders] = React.useState(leaders);
 
   React.useEffect(() => {
     // Enable pusher logging - don't include this in production
@@ -22,6 +23,9 @@ const Public = ({ leaders }) => {
     channel.bind("reveal", function (data) {
       setreavealed(data.questionId);
     });
+    channel.bind("team_added", function (data) {
+      _setLeaders([..._leaders,data.team]);
+    });
     return () => {
       channel.unbind_all();
       channel.unsubscribe();
@@ -35,7 +39,7 @@ const Public = ({ leaders }) => {
         _public={true}
         _revealed={revealed}
       />
-      <PublicLeaderBoard leaders={leaders} />
+      <PublicLeaderBoard leaders={_leaders} />
     </div>
   );
 };

@@ -8,7 +8,7 @@ import Progressbar from "../components/Progressbar";
 import Answer from "../components/Answer";
 import Timer from "../components/Timer"
 
-function Home({ leaders }) {
+function Home({ leaders, setLeaders }) {
   return (
     <div className="home_wrapper">
       <UserProfile />
@@ -16,7 +16,7 @@ function Home({ leaders }) {
       <LeaderBoard leaders={leaders} />
       <Progressbar />
       <Answer leaders={leaders} />
-      <Teamform />
+      <Teamform setLeaders={setLeaders} />
       <Timer />
     </div>
   );
