@@ -27,7 +27,7 @@ const PublicLeaderBoard = ({ leaders }) => {
                 </h3>
                 <div className="rank">
                   <p>
-                    Attempted: <strong>{leader.attemted}</strong>
+                    Attempted: <strong>{leader.attempted}</strong>
                   </p>
                   <p>
                     points: <strong>{leader.points}</strong>

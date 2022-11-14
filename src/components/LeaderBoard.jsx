@@ -12,7 +12,7 @@ function LeaderBoard({ leaders }) {
             <div className="team">
               <h3>{leader.team}</h3>
               <div className="rank">
-                <p>Attempted: {leader.attemted}</p>
+                <p>Attempted: {leader.attempted}</p>
                 <p>points: {leader.points} </p>
               </div>
             </div>

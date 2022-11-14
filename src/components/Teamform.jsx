@@ -1,8 +1,17 @@
+import axios from "axios";
 import React from "react";
 
-const Teamform = () => {
+const Teamform = ({setLeaders}) => {
   const [clicked, setClicked] = React.useState(false);
-  console.log(clicked);
+  const [TeamName, setTeamName] = React.useState("")
+  const handleSubmit = ()=>{
+    if(TeamName!==""){
+      axios.post("https://quizapp-server-production.up.railway.app/addTeam",{name:TeamName}).then(res=>{
+        setTeamName("")
+        setLeaders(res.data)
+      })
+    }
+  }
   return (
     <div className="teamform__container">
       <div className="team">
@@ -14,9 +23,12 @@ const Teamform = () => {
           <input
             type="text"
             name="team name"
+            value={TeamName}
+            onChange={e=>setTeamName(e.target.value)}
             onClick={() => setClicked(true)}
+
           />
-        <button>Submit</button>
+        <button onClick={handleSubmit}>Submit</button>
         </div>
       </div>
     </div>

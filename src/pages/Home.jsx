@@ -7,7 +7,7 @@ import "./home.css";
 import Progressbar from "../components/Progressbar";
 import Answer from "../components/Answer";
 
-function Home({ leaders }) {
+function Home({ leaders, setLeaders }) {
   return (
     <div className="home_wrapper">
       <UserProfile />
@@ -15,7 +15,7 @@ function Home({ leaders }) {
       <LeaderBoard leaders={leaders} />
       <Progressbar />
       <Answer leaders={leaders} />
-      <Teamform />
+      <Teamform setLeaders={setLeaders} />
     </div>
   );
 }
