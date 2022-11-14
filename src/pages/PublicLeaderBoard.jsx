@@ -7,7 +7,20 @@ const PublicLeaderBoard = ({ leaders }) => {
   return (
     <div className="leaderboards__component">
       <h3>Points Table</h3>
-      <Loading />
+      <div className="loading">
+        <Loading />
+        <div className="icons">
+          <p>
+            <i className="ri-arrow-up-fill"></i>
+          </p>
+          <p>
+            <i className="ri-arrow-down-fill"></i>
+          </p>
+          <p>
+          <i className="ri-subtract-line"></i>
+          </p>
+        </div>
+      </div>
       <div className="leaderboards">
         {leaders.map((leader, i) => {
           return (
