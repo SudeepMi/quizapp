@@ -6,7 +6,7 @@
     gap: 130px 50px;
     grid-template-rows: auto auto;
     grid-template-areas:
-      ". progressbar progressbar"
+      "timer progressbar progressbar"
       "question question leaderboard"
       "answer answer teamform";
   }
@@ -151,6 +151,13 @@
         }
       }
     }
+  }
+  .timer__wrapper{
+    grid-area: timer;
+    padding: 1.5em;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
 }
 
