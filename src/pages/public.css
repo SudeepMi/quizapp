@@ -71,6 +71,7 @@
       padding: 1.1em 1.5em;
       gap: 20px;
       border-radius: 3px;
+      width: 400px;
 
       .imagediv {
         position: relative;

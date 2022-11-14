@@ -10,8 +10,9 @@ const Answer = ({ leaders }) => {
             <div className="btn-group" key={i}>
               <button>{leader.team}</button>
               <button>
-                <strong>{leader.points}</strong>{" "}
+                <strong>{leader.points}</strong>
               </button>
+              <button><i className="ri-delete-bin-line"></i></button>
             </div>
           );
         })}
