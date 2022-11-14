@@ -152,7 +152,7 @@
       }
     }
   }
-  .timer__wrapper{
+  .timer__wrapper {
     grid-area: timer;
     padding: 1.5em;
     display: grid;
@@ -259,6 +259,7 @@
     gap: 50px;
 
     .btn-group {
+      display: flex;
       button {
         border: none;
         padding: 0.8em;
@@ -271,6 +272,11 @@
       button:nth-of-type(2) {
         background-color: rgb(42, 224, 39);
         color: #000;
+      }
+      button:nth-of-type(3) {
+        i {
+          font-size: 1em;
+        }
       }
     }
   }
@@ -291,32 +297,34 @@
       gap: 20px;
       label {
         position: absolute;
-        top: 15px;
+        top: 23px;
         left: 18px;
         color: #eee7;
         z-index: -1;
-
-        &.tr-label {
-          transform: translateY(-13px);
-          transition: 0.5s;
-        }
+        transition: 0.4s ease all;
       }
       input {
         padding: 1.2em;
         font-size: 1.1em;
         color: #fff;
+        margin: .2em 0;
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.02);
         border-radius: 6px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(.5px);
-        -webkit-backdrop-filter: blur(.5px);
+        backdrop-filter: blur(0.5px);
+        -webkit-backdrop-filter: blur(0.5px);
         border: 1px solid rgba(255, 255, 255, 0.17);
 
-
-
-        &:active,&:focus {
+        &:active,
+        &:focus {
           outline: none;
+        }
+        &:not(:focus):valid ~ label {
+          transform: translateY(0);
+        }
+        &:focus ~ label {
+          transform: translateY(-18px);
         }
       }
     }
