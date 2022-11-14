@@ -1,11 +1,13 @@
 import React from "react";
+import Loading from "../components/Loading";
 
 const PublicLeaderBoard = ({ leaders }) => {
   const rank = { 1: "1st", 2: "2nd", 3: "3rd" };
 
   return (
-    <>
+    <div className="leaderboards__component">
       <h3>Points Table</h3>
+      <Loading />
       <div className="leaderboards">
         {leaders.map((leader, i) => {
           return (
@@ -36,7 +38,7 @@ const PublicLeaderBoard = ({ leaders }) => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
