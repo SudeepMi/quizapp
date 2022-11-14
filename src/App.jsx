@@ -23,7 +23,7 @@ function App() {
         <Route exact element={<PrivateRoute />}>
           <Route path="/home" element={<Home leaders = {leaders} setLeaders={setLeaders} />} />
         </Route>
-        <Route path="/" element={<Public leaders = {leaders}/>} />
+        <Route path="/" element={<Public leaders = {leaders} setLeaders={setLeaders}  />} />
         <Route path="/signin" element={<Signin />} />
       </Routes>
     </div>

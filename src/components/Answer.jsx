@@ -1,6 +1,11 @@
+import axios from "axios";
 import React from "react";
 
-const Answer = ({ leaders }) => {
+const Answer = ({ leaders,setLeaders }) => {
+
+  const handleDelete = (id) =>{
+    axios.post("https://quizapp-server-production.up.railway.app/removeTeam",{id:id}).then(res=>setLeaders(res.data))
+  }
   return (
     <div className="answerby__component">
       <h3>Answered by</h3>
@@ -12,7 +17,7 @@ const Answer = ({ leaders }) => {
               <button>
                 <strong>{leader.points}</strong>
               </button>
-              <button><i className="ri-delete-bin-line"></i></button>
+              <button onClick={()=>handleDelete(leader.id)}><i className="ri-delete-bin-line"></i></button>
             </div>
           );
         })}

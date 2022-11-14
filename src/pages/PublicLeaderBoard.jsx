@@ -2,6 +2,7 @@ import React from "react";
 import Loading from "../components/Loading";
 
 const PublicLeaderBoard = ({ leaders }) => {
+
   const rank = { 1: "1st", 2: "2nd", 3: "3rd" };
 
   return (

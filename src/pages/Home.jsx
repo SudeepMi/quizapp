@@ -15,7 +15,7 @@ function Home({ leaders, setLeaders }) {
       <Questions mode={"optionBased"} />
       <LeaderBoard leaders={leaders} />
       <Progressbar />
-      <Answer leaders={leaders} />
+      <Answer leaders={leaders} setLeaders={setLeaders} />
       <Teamform setLeaders={setLeaders} />
       <Timer />
     </div>
