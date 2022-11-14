@@ -6,6 +6,7 @@ import Teamform from "../components/Teamform";
 import "./home.css";
 import Progressbar from "../components/Progressbar";
 import Answer from "../components/Answer";
+import Timer from "../components/Timer"
 
 function Home({ leaders }) {
   return (
@@ -16,6 +17,7 @@ function Home({ leaders }) {
       <Progressbar />
       <Answer leaders={leaders} />
       <Teamform />
+      <Timer />
     </div>
   );
 }
