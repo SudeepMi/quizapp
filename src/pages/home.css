@@ -252,6 +252,7 @@
     gap: 50px;
 
     .btn-group {
+      display: flex;
       button {
         border: none;
         padding: 0.8em;
@@ -264,6 +265,11 @@
       button:nth-of-type(2) {
         background-color: rgb(42, 224, 39);
         color: #000;
+      }
+      button:nth-of-type(3){
+        i {
+          font-size: 1em;
+        }
       }
     }
   }
