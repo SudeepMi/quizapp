@@ -8,7 +8,7 @@
     grid-template-areas:
       ". progressbar progressbar"
       "question question leaderboard"
-      "answer answer answer";
+      "answer answer teamform";
   }
   .user_profile {
     border: 1px solid rgb(1, 1, 1);
@@ -23,6 +23,7 @@
     grid-area: question;
     animation-name: fade;
     animation-duration: 1s;
+    animation-timing-function: ease;
 
     .option_area {
       display: flex;
@@ -81,7 +82,26 @@
     max-height: 30vh;
     overflow-x: hidden;
     overflow-y: scroll;
-    
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &&::-webkit-scrollbar-track {
+      background-color: rgba(255, 255, 255, 0.525);
+    }
+
+    &&::-webkit-scrollbar-thumb {
+      background-color: rgba(238, 238, 238, 0.695);
+    }
+
+    &&::-webkit-scrollbar-thumb {
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(238, 238, 238, 0.356);
+      }
+    }
+
     .profile__box {
       display: flex;
       padding: 1.5em;
@@ -91,7 +111,6 @@
       background-color: #38393bc4;
       margin: 2em 0;
       border-radius: 5px;
-
 
       .position {
         position: absolute;
@@ -111,7 +130,6 @@
         &.color-3 {
           background-color: rgba(255, 105, 180, 0.733);
         }
-        
       }
 
       img {
@@ -138,10 +156,49 @@
 
 .progressbar {
   grid-area: progressbar;
-  border: 1px solid;
+  border: 1px solid #000;
   position: relative;
   margin-top: 6em;
 
+  span:first-child {
+    border: 1px solid;
+    position: absolute;
+    width: 30%;
+    right: 70%;
+    top: 0;
+    &.animation {
+      animation-name: changeColor;
+      animation-duration: 3s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  span:nth-of-type(2) {
+    border: 1px solid;
+    position: absolute;
+    left: 30%;
+    width: 35%;
+    &.animation1 {
+      animation-name: change2ndColor;
+      animation-duration: 3s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  span:nth-of-type(3) {
+    border: 1px solid;
+    width: 35%;
+    right: 0;
+    position: absolute;
+    &.animation2 {
+      animation-name: change3rdColor;
+      animation-duration: 3s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+    }
+  }
 
   .rapidfire,
   .optionbased,
@@ -170,7 +227,6 @@
 
   .optionbased {
     left: 30%;
-
   }
 
   .questionare {
@@ -179,10 +235,9 @@
 
   .code_competition {
     right: -10px;
-    p{
+    p {
       right: -12px;
     }
-
   }
 }
 
@@ -199,19 +254,71 @@
     .btn-group {
       button {
         border: none;
-        padding: .8em;
+        padding: 0.8em;
         font-size: 1.1em;
         cursor: pointer;
       }
-      button:nth-of-type(1){
+      button:nth-of-type(1) {
         background-color: #38393bc4;
       }
-      button:nth-of-type(2){
+      button:nth-of-type(2) {
         background-color: rgb(42, 224, 39);
         color: #000;
       }
     }
+  }
+}
 
+.teamform__container {
+  grid-area: teamform;
+  .team {
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .input {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      gap: 20px;
+      label {
+        position: absolute;
+        top: 15px;
+        left: 18px;
+        color: #eee7;
+        z-index: -1;
+
+        &.tr-label {
+          transform: translateY(-13px);
+          transition: 0.5s;
+        }
+      }
+      input {
+        padding: 1.2em;
+        font-size: 1.1em;
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 6px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(.5px);
+        -webkit-backdrop-filter: blur(.5px);
+        border: 1px solid rgba(255, 255, 255, 0.17);
+
+
+
+        &:active,&:focus {
+          outline: none;
+        }
+      }
+    }
+    button {
+      padding: 0.5em 0.8em;
+      width: fit-content;
+      font-size: 1.1em;
+      cursor: pointer;
+      border-radius: 5px;
+    }
   }
 }
 
@@ -240,20 +347,27 @@
     color: #fff;
   }
 
-  30% {
-    color: #000;
-  }
-
-  50% {
-    color: #0d1117;
-  }
-
-  75% {
-    color: #38393bc4;
-  }
-
   100% {
-    color: #fff;
+    color: rgb(42, 224, 39);
   }
 }
 
+@keyframes change2ndColor {
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: rgb(42, 224, 39);
+  }
+}
+
+@keyframes change3rdColor {
+  0% {
+    color: #fff;
+  }
+
+  100% {
+    color: rgb(42, 224, 39);
+  }
+}
