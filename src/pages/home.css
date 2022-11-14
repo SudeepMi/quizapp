@@ -304,6 +304,7 @@
       input {
         padding: 1.2em;
         font-size: 1.1em;
+        color: #fff;
         /* From https://css.glass */
         background: rgba(255, 255, 255, 0.02);
         border-radius: 6px;
