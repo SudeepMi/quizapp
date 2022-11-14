@@ -246,14 +246,32 @@
 
     .optionbased {
       left: 30%;
+      &.animation {
+        animation-name: changePColor;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
     }
 
     .questionare {
       left: 65%;
+      &.animation {
+        animation-name: changePColor;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
     }
 
     .code_competition {
       right: -10px;
+      &.animation {
+        animation-name: changePColor;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
       p {
         right: -12px;
       }
@@ -396,5 +414,14 @@
 
   100% {
     color: rgb(42, 224, 39);
+  }
+}
+
+@keyframes changePColor {
+  0% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: rgb(42, 224, 39);
   }
 }
