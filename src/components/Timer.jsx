@@ -83,7 +83,7 @@ const Timer = () => {
 	return (
 		<div className="timer__wrapper">
 			<h2>{timer}</h2>
-			{/* <button onClick={onClickReset}>Reset</button> */}
+			<button onClick={onClickReset}>Reset</button>
 		</div>
 	)
 }

@@ -158,182 +158,193 @@
     display: grid;
     align-items: center;
     justify-content: center;
-  }
-}
-
-.progressbar {
-  grid-area: progressbar;
-  border: 1px solid #000;
-  position: relative;
-  margin-top: 6em;
-
-  span:first-child {
-    border: 1px solid;
-    position: absolute;
-    width: 30%;
-    right: 70%;
-    top: 0;
-    &.animation {
-      animation-name: changeColor;
-      animation-duration: 3s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  span:nth-of-type(2) {
-    border: 1px solid;
-    position: absolute;
-    left: 30%;
-    width: 35%;
-    &.animation1 {
-      animation-name: change2ndColor;
-      animation-duration: 3s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  span:nth-of-type(3) {
-    border: 1px solid;
-    width: 35%;
-    right: 0;
-    position: absolute;
-    &.animation2 {
-      animation-name: change3rdColor;
-      animation-duration: 3s;
-      animation-timing-function: ease;
-      animation-fill-mode: forwards;
-    }
-  }
-
-  .rapidfire,
-  .optionbased,
-  .questionare,
-  .code_competition {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff;
-    position: absolute;
-    top: -25px;
-    cursor: pointer;
-
-    p {
-      position: absolute;
-      top: 60px;
-      text-align: center;
-      color: #fff;
-    }
-  }
-
-  .rapidfire {
-    left: -5px;
-    background-color: rgb(42, 224, 39);
-  }
-
-  .optionbased {
-    left: 30%;
-  }
-
-  .questionare {
-    left: 65%;
-  }
-
-  .code_competition {
-    right: -10px;
-    p {
-      right: -12px;
-    }
-  }
-}
-
-.answerby__component {
-  grid-area: answer;
-  padding: 1em;
-  .answer {
-    padding: 1em;
-    margin-top: 1em;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-
-    .btn-group {
-      display: flex;
-      button {
-        border: none;
-        padding: 0.8em;
-        font-size: 1.1em;
-        cursor: pointer;
-      }
-      button:nth-of-type(1) {
-        background-color: #38393bc4;
-      }
-      button:nth-of-type(2) {
-        background-color: rgb(42, 224, 39);
-        color: #000;
-      }
-      button:nth-of-type(3) {
-        i {
-          font-size: 1em;
-        }
-      }
-    }
-  }
-}
-
-.teamform__container {
-  grid-area: teamform;
-  .team {
-    padding: 0.5em;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 
-    .input {
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      gap: 20px;
-      label {
-        position: absolute;
-        top: 23px;
-        left: 18px;
-        color: #eee7;
-        z-index: -1;
-        transition: 0.4s ease all;
+    button {
+      padding: 0.5em;
+      color: #fff;
+      font-size: 1.1em;
+      cursor: pointer;
+      border: 1px solid #fff;
+      background-color: transparent;
+      border-radius: 5px;
+      &:hover {
+        color: #fff8;
+        border: 1px solid #fff8;
       }
-      input {
-        padding: 1.2em;
-        font-size: 1.1em;
-        color: #fff;
-        margin: .2em 0;
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 6px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(0.5px);
-        -webkit-backdrop-filter: blur(0.5px);
-        border: 1px solid rgba(255, 255, 255, 0.17);
+    }
+  }
+  .progressbar {
+    grid-area: progressbar;
+    position: relative;
+    margin-top: 6em;
 
-        &:active,
-        &:focus {
-          outline: none;
+    span:first-child {
+      border: 1px solid;
+      position: absolute;
+      width: 30%;
+      right: 70%;
+      top: 0;
+      &.animation {
+        animation-name: changeColor;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    span:nth-of-type(2) {
+      border: 1px solid;
+      position: absolute;
+      left: 30%;
+      width: 35%;
+      &.animation1 {
+        animation-name: change2ndColor;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    span:nth-of-type(3) {
+      border: 1px solid;
+      width: 35%;
+      right: 0;
+      position: absolute;
+      &.animation2 {
+        animation-name: change3rdColor;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .rapidfire,
+    .optionbased,
+    .questionare,
+    .code_competition {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #fff;
+      position: absolute;
+      top: -25px;
+      cursor: pointer;
+
+      p {
+        position: absolute;
+        top: 60px;
+        text-align: center;
+        color: #fff;
+      }
+    }
+
+    .rapidfire {
+      left: -5px;
+      background-color: rgb(42, 224, 39);
+    }
+
+    .optionbased {
+      left: 30%;
+    }
+
+    .questionare {
+      left: 65%;
+    }
+
+    .code_competition {
+      right: -10px;
+      p {
+        right: -12px;
+      }
+    }
+  }
+  .answerby__component {
+    grid-area: answer;
+    padding: 1em;
+    .answer {
+      padding: 1em;
+      margin-top: 1em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      .btn-group {
+        display: flex;
+        button {
+          border: none;
+          padding: 0.8em;
+          font-size: 1.1em;
+          cursor: pointer;
         }
-        &:not(:focus):valid ~ label {
-          transform: translateY(0);
+        button:nth-of-type(1) {
+          background-color: #38393bc4;
         }
-        &:focus ~ label {
-          transform: translateY(-18px);
+        button:nth-of-type(2) {
+          background-color: rgb(42, 224, 39);
+          color: #000;
+        }
+        button:nth-of-type(3) {
+          i {
+            font-size: 1em;
+          }
         }
       }
     }
-    button {
-      padding: 0.5em 0.8em;
-      width: fit-content;
-      font-size: 1.1em;
-      cursor: pointer;
-      border-radius: 5px;
+  }
+  .teamform__container {
+    grid-area: teamform;
+    .team {
+      padding: 0.5em;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .input {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 20px;
+        label {
+          position: absolute;
+          top: 23px;
+          left: 18px;
+          color: #eee7;
+          z-index: -1;
+          transition: 0.4s ease all;
+        }
+        input {
+          padding: 1.2em;
+          font-size: 1.1em;
+          color: #fff;
+          margin: 0.2em 0;
+          /* From https://css.glass */
+          background: rgba(255, 255, 255, 0.02);
+          border-radius: 6px;
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          backdrop-filter: blur(0.5px);
+          -webkit-backdrop-filter: blur(0.5px);
+          border: 1px solid rgba(255, 255, 255, 0.17);
+
+          &:active,
+          &:focus {
+            outline: none;
+          }
+          &:not(:focus):valid ~ label {
+            transform: translateY(0);
+          }
+          &:focus ~ label {
+            transform: translateY(-18px);
+          }
+        }
+      }
+      button {
+        padding: 0.5em 0.8em;
+        width: fit-content;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 5px;
+      }
     }
   }
 }
