@@ -78,10 +78,9 @@
 
   .leaderboards {
     grid-area: leaderboard;
-    margin-bottom: 1em;
     max-height: 30vh;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
       width: 6px;
@@ -109,7 +108,7 @@
       align-items: center;
       gap: 10px;
       background-color: #38393bc4;
-      margin: 2em 0;
+      margin-bottom: 1em;
       border-radius: 5px;
 
       .position {

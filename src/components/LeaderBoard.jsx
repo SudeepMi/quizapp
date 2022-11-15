@@ -4,8 +4,7 @@ function LeaderBoard({ leaders }) {
   const rank = { 1: "1st", 2: "2nd", 3: "3rd" };
 
   {
-    leaders.length >= 1;
-    return (
+    return leaders.length >= 1 ? (
       <div className="leaderboards">
         {leaders.map((leader, i) => {
           return (
@@ -24,6 +23,10 @@ function LeaderBoard({ leaders }) {
             </div>
           );
         })}
+      </div>
+    ) : (
+      <div>
+        <h3>No team available ...please fill a form to participate</h3>
       </div>
     );
   }
