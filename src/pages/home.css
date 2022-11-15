@@ -4,11 +4,11 @@
   @media screen and (min-width: 50em) {
     display: grid;
     gap: 130px 50px;
-    grid-template-rows: auto auto;
+    grid-auto-columns: minmax(0,1fr);
     grid-template-areas:
       "timer progressbar progressbar"
       "question question leaderboard"
-      "answer . teamform";
+      "answer answer teamform";
   }
   .user_profile {
     border: 1px solid rgb(1, 1, 1);
