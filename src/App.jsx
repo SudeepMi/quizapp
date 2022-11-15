@@ -10,20 +10,28 @@ import axios from "axios";
 
 function App() {
   const [islogged, setislogged] = React.useState(true);
-  const [leaders,setLeaders] = React.useState([]);
+  const [leaders, setLeaders] = React.useState([]);
   // const leaders = [];
-  React.useEffect(()=>{
-    axios.get("https://quizapp-server-production.up.railway.app/getTeam").then(res=>setLeaders(res.data))
-  },[])
+  React.useEffect(() => {
+    axios
+      .get("https://quizapp-server-production.up.railway.app/getTeam")
+      .then((res) => setLeaders(res.data));
+  }, []);
 
   return (
     <div className="main">
       {islogged && <Navbar />}
       <Routes>
         <Route exact element={<PrivateRoute />}>
-          <Route path="/home" element={<Home leaders = {leaders} setLeaders={setLeaders} />} />
+          <Route
+            path="/home"
+            element={<Home leaders={leaders} setLeaders={setLeaders} />}
+          />
         </Route>
-        <Route path="/" element={<Public leaders = {leaders} setLeaders={setLeaders}  />} />
+        <Route
+          path="/"
+          element={<Public leaders={leaders} setLeaders={setLeaders} />}
+        />
         <Route path="/signin" element={<Signin />} />
       </Routes>
     </div>

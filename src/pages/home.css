@@ -8,7 +8,7 @@
     grid-template-areas:
       "timer progressbar progressbar"
       "question question leaderboard"
-      "answer answer teamform";
+      "answer . teamform";
   }
   .user_profile {
     border: 1px solid rgb(1, 1, 1);
