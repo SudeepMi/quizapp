@@ -2,7 +2,6 @@ import axios from "axios";
 import React from "react";
 
 const Teamform = ({ setLeaders }) => {
-  // const [clicked, setClicked] = React.useState(false);
   const [TeamName, setTeamName] = React.useState("");
   const handleSubmit = () => {
     if (TeamName !== "") {

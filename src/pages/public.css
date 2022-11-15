@@ -55,25 +55,19 @@
   }
   .leaderboards__component {
     margin-top: 4em;
-    /* position: relative; */
 
     .leaderboards {
       display: flex;
       gap: 50px;
       flex-wrap: wrap;
       position: relative;
-      margin: 3em 0;
-
-      h3 {
-        margin: 1em 0;
-      }
+      margin: 1.5em 0;
 
       .profile__box {
         display: flex;
         align-items: center;
         background-color: #38393bc4;
-        margin-top: 1em;
-        /* padding: .5em; */
+        padding: .8em .5em;
         gap: 20px;
         border-radius: 3px;
         width: 400px;
@@ -86,8 +80,8 @@
           .medal {
             position: absolute;
             display: flex;
-             top: -15px; 
-             left: 10px;
+            top: -10px;
+            left: 3px;
             align-items: center;
             gap: 5px;
             font-size: 1.1em;
@@ -108,12 +102,14 @@
 
         img {
           height: 100px;
-          /* width: 100px; */
         }
 
         .team {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           h3 {
-            font-size: 1.8em;
+            font-size: 1.7em;
             margin: 0.2em 0;
           }
 
@@ -127,27 +123,19 @@
         .loading {
           display: flex;
           align-items: center;
-          /* justify-content: space-between; */
+          justify-content: space-between;
           flex-direction: column;
-          gap: 15px;
-          padding: 3px 3px 0 3px;
-          /* svg {
-            position: absolute;
-            top: 2px;
-            right: 9px;
-          } */
+          gap: 35px;          
+
           .icons {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             flex-direction: column;
-            /* position: absolute;
-            right: 10px;
-            bottom: 0; */
 
             i {
               font-size: 1.8em;
-              text-shadow: 1px 1px #000 ;
+              text-shadow: 1px 1px #000;
             }
             p {
               cursor: pointer;
