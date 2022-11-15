@@ -55,44 +55,7 @@
   }
   .leaderboards__component {
     margin-top: 4em;
-    position: relative;
-
-    .loading {
-      width: 400px;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      svg {
-        position: absolute;
-        top: 15px;
-      }
-      .icons {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        right: 10px;
-        top: 35px;
-        i{
-          font-size: 1.8em;
-        }
-        p{
-          cursor: pointer;
-        }
-        p:nth-of-type(1){
-          i{
-            color: rgb(42, 224, 39);
-          }
-        }      
-        p:nth-of-type(2){
-          i{
-            color: rgba(220, 20, 60, 0.827);
-          }
-        }
-  
-      }
-    }
+    /* position: relative; */
 
     .leaderboards {
       display: flex;
@@ -110,12 +73,12 @@
         align-items: center;
         background-color: #38393bc4;
         margin-top: 1em;
-        padding: 1.1em 1.5em;
+        /* padding: .5em; */
         gap: 20px;
         border-radius: 3px;
         width: 400px;
         justify-content: space-between;
-        /* position: relative; */
+        position: relative;
 
         .imagediv {
           position: relative;
@@ -123,8 +86,8 @@
           .medal {
             position: absolute;
             display: flex;
-            top: -10px;
-            left: -20px;
+             top: -15px; 
+             left: 10px;
             align-items: center;
             gap: 5px;
             font-size: 1.1em;
@@ -157,6 +120,47 @@
           .rank {
             p {
               font-size: 1.3em;
+            }
+          }
+        }
+
+        .loading {
+          display: flex;
+          align-items: center;
+          /* justify-content: space-between; */
+          flex-direction: column;
+          gap: 15px;
+          padding: 3px 3px 0 3px;
+          /* svg {
+            position: absolute;
+            top: 2px;
+            right: 9px;
+          } */
+          .icons {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            /* position: absolute;
+            right: 10px;
+            bottom: 0; */
+
+            i {
+              font-size: 1.8em;
+              text-shadow: 1px 1px #000 ;
+            }
+            p {
+              cursor: pointer;
+            }
+            p:nth-of-type(1) {
+              i {
+                color: rgb(42, 224, 39);
+              }
+            }
+            p:nth-of-type(2) {
+              i {
+                color: rgba(243, 11, 57, 0.63);
+              }
             }
           }
         }

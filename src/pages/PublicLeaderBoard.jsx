@@ -2,26 +2,11 @@ import React from "react";
 import Loading from "../components/Loading";
 
 const PublicLeaderBoard = ({ leaders }) => {
-
   const rank = { 1: "1st", 2: "2nd", 3: "3rd" };
 
   return (
     <div className="leaderboards__component">
       <h3>Points Table</h3>
-      <div className="loading">
-        <Loading />
-        <div className="icons">
-          <p>
-            <i className="ri-arrow-up-fill"></i>
-          </p>
-          <p>
-            <i className="ri-arrow-down-fill"></i>
-          </p>
-          <p>
-          <i className="ri-subtract-line"></i>
-          </p>
-        </div>
-      </div>
       <div className="leaderboards">
         {leaders.map((leader, i) => {
           return (
@@ -45,6 +30,21 @@ const PublicLeaderBoard = ({ leaders }) => {
                   </p>
                   <p>
                     points: <strong>{leader.points}</strong>
+                  </p>
+                </div>
+              </div>
+
+              <div className="loading">
+                <Loading />
+                <div className="icons">
+                  <p>
+                    <i className="ri-arrow-up-fill"></i>
+                  </p>
+                  <p>
+                    <i className="ri-arrow-down-fill"></i>
+                  </p>
+                  <p>
+                    <i className="ri-subtract-line"></i>
                   </p>
                 </div>
               </div>

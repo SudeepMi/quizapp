@@ -349,7 +349,7 @@
             outline: none;
           }
           &:not(:focus):valid ~ label {
-            transform: translateY(0);
+            transform: translateY(0px);
           }
           &:focus ~ label {
             transform: translateY(-18px);
