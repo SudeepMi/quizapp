@@ -4,11 +4,12 @@ import Loading from "../components/Loading";
 const PublicLeaderBoard = ({ leaders }) => {
   const rank = { 1: "1st", 2: "2nd", 3: "3rd" };
 
-  return (
+  return leaders.length >= 1 ? (
     <div className="leaderboards__component">
       <h3>Points Table</h3>
       <div className="leaderboards">
         {leaders.map((leader, i) => {
+          console.log(leader);
           return (
             <div className="profile__box" key={i}>
               <div className="imagediv">
@@ -40,18 +41,22 @@ const PublicLeaderBoard = ({ leaders }) => {
                   <p>
                     <i className="ri-arrow-up-fill"></i>
                   </p>
-                  <p>
+                  {/* <p>
                     <i className="ri-arrow-down-fill"></i>
                   </p>
                   <p>
                     <i className="ri-subtract-line"></i>
-                  </p>
+                  </p> */}
                 </div>
               </div>
             </div>
           );
         })}
       </div>
+    </div>
+  ) : (
+    <div>
+      <h3>No teams available to show points</h3>
     </div>
   );
 };
